@@ -14,4 +14,4 @@ USER 1001
 
 EXPOSE 3000
 
-CMD ["npx", "@modelcontextprotocol/server-postgres", "--transport", "http", "--port", "3000"]
+CMD npx @modelcontextprotocol/server-postgres --transport http --port 3000
