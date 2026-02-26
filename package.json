@@ -1,0 +1,8 @@
+{
+  "name": "postgres-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@modelcontextprotocol/server-postgres": "latest"
+  }
+}
