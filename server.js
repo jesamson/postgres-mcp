@@ -1,7 +1,11 @@
-// server.js
 import { startServer } from "@modelcontextprotocol/server-postgres";
 
-const port = process.env.PORT || 3000;
+const port = Number(process.env.PORT || 3000);
 const transport = process.env.TRANSPORT || "http";
 
-startServer({ port: Number(port), transport });
+startServer({ port, transport })
+  .then(() => console.log(`Server running on port ${port}`))
+  .catch(err => {
+    console.error("Failed to start server:", err);
+    process.exit(1);
+  });
